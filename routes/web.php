@@ -28,5 +28,8 @@ $router->put('/users/{id}', 'UserController@update');       //put means all valu
 $router->patch('/users/{id}', 'UserController@update');       //update specific info
 $router->delete('/users/{id}', 'UserController@delete');    //delete record
 
-$router->get('login', 'UserController@showlogin');      //loginpage
-$router->post('validate', 'UserController@result');     //login button
+// $router->get('login', 'UserController@showlogin');      //loginpage
+// $router->post('validate', 'UserController@result');     //login button
+
+$router->get('/usersjob','UserJobController@index');
+$router->get('/usersjob/{id}','UserJobController@show'); // get user by id
